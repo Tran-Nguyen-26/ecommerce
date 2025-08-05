@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Header from './Components/Header'
+import { createContext, useEffect, useState } from 'react'
+import axios from 'axios'
+import Footer from "./Components/Footer"
+import ProductModal from './Components/ProductModal'
+import Listing from './Pages/Listing'
+import ProductDetails from './Pages/ProductDetails'
 
-function App() {
+const MyContext = createContext()
+
+export default function App() {
+
+  const [countryList, setCountryList] = useState([])
+  const [selectedCountry, setselectedCountry] = useState('')
+  const [isOpenPorductModal, setisOpenProductModal] = useState(false)
+
+  useEffect(() => {
+    getCountry('https://countriesnow.space/api/v0.1/countries/')
+  }, [])
+
+  const getCountry = async (url) => {
+    const responsive = await axios.get(url).then((res) => {
+      setCountryList(res.data.data)
+    })
+  }
+
+  const values = {
+    countryList,
+    selectedCountry,
+    setselectedCountry,
+    isOpenPorductModal,
+    setisOpenProductModal
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <MyContext.Provider value={values}>
+        <Header/>
+        <Routes>
+          <Route path="/" exact={true} element={<Home/>}/>
+          <Route path="/cat/:id" exact={true} element={<Listing/>}/>
+          <Route path="/product/:id" exact={true} element={<ProductDetails/>}/>
+        </Routes>
+        <Footer />
+
+        {
+          isOpenPorductModal === true && <ProductModal/>
+        }
+      </MyContext.Provider>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export {MyContext}

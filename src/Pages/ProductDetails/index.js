@@ -7,6 +7,7 @@ import { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { MdCompareArrows } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
+import RelatedProducts from "./RelatedProducts";
 
 
 const ProductDetails = () => {
@@ -176,12 +177,62 @@ const ProductDetails = () => {
                   <div className="row">
                     <div className="col-md-8">
                       <h3>Customer questions & answers</h3>
+                      <div className="card p-4 reviewsCard flex-row">
+                        <div className="image">
+                          <div className="rounded-circle">
+                            <img src="https://cdn.dribbble.com/userupload/27341424/file/original-7526e60193cff69cba7dc1cf48a696d6.png?resize=80x60"/>
+                          </div>
+                          <span className="text-g d-block text-center font-weight-bold">Ringku</span>
+                        </div>
+                        <div className="info ps-5">
+                          <div className="d-flex align-items-center w-100">
+                            <h5 className="text-light">26/07/2015</h5>
+                            <div className="ms-auto">
+                              <Rating name="half-rating-read" value={4.5} precision={0.5} readOnly size="small"/>
+                            </div>
+                          </div>
+                          <p>Many buyers want to feel confident in their purchasing decisions before completing a sale. 
+                              Product reviews are a great resource for customers to research their buying options and contemplate the pros and cons of
+                              a product or service. Businesses may also use product reviews as powerful marketing tools to increase positive perception
+                              of a product or service and increase brand awareness.
+                          </p>
+                        </div>
+                      </div>
                     </div>
+                    <form className="reviewForm">
+                      <h4>Add a review</h4>
+                      <br/>
+                      <div className="form-group">
+                        <textarea className="form-control"
+                                  placeholder="Write a Review"
+                                  name="Review"
+                        ></textarea>
+                      </div>
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input type="text" className="form-control" placeholder="Name" name="username"></input>
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <Rating name="Rating" value={4.5} precision={0.5}/>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <Button type="submit" className="btn-blue btn-lg btn-big btn-round">Submit Review</Button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               }
+
             </div>
           </div>
+          
+          <RelatedProducts/>
+
         </div>
       </section>
     </>

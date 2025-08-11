@@ -2,7 +2,6 @@ import Rating from '@mui/material/Rating'
 import { SlSizeFullscreen } from "react-icons/sl";
 import Button from '@mui/material/Button'
 import { LuHeart } from "react-icons/lu";
-import ProductModal from '../ProductModal';
 import { useContext, useState } from 'react';
 import { MyContext } from '../../App';
 

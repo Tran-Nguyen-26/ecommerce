@@ -192,13 +192,13 @@ const ProductDetails = () => {
                             </div>
                           </div>
                           <p>Many buyers want to feel confident in their purchasing decisions before completing a sale. 
-                              Product reviews are a great resource for customers to research their buying options and contemplate the pros and cons of
-                              a product or service. Businesses may also use product reviews as powerful marketing tools to increase positive perception
-                              of a product or service and increase brand awareness.
+                            Product reviews are a great resource for customers to research their buying options and contemplate the pros and cons of
+                            a product or service. Businesses may also use product reviews as powerful marketing tools to increase positive perception
+                            of a product or service and increase brand awareness.
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div>                    
                     <form className="reviewForm">
                       <h4>Add a review</h4>
                       <br/>
@@ -231,7 +231,9 @@ const ProductDetails = () => {
             </div>
           </div>
           
-          <RelatedProducts/>
+          <RelatedProducts title="REALTED PRODUCTS"/>
+
+          <RelatedProducts title="RECENTLY VIEWED PRODUCTS"/>
 
         </div>
       </section>

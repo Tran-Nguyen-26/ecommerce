@@ -9,6 +9,7 @@ import { CiHeart } from "react-icons/ci";
 import { MdCompareArrows } from "react-icons/md";
 import { MyContext } from '../../App';
 import ProductZoom from '../ProductZoom';
+import { FaShoppingCart } from "react-icons/fa";
 
 const ProductModal = (props) => {
 
@@ -43,7 +44,7 @@ const ProductModal = (props) => {
 
           <div className='d-flex align-items-center'>
             <QuantityBox/>
-            <Button className='btn-blue btn-lg btn-big btn-round ms-3'>Add to Cart</Button>
+            <Button className='btn-blue btn-lg btn-big btn-round ms-3'><FaShoppingCart/> &nbsp; Add to Cart</Button>
           </div>
 
           <div className='d-flex align-items-center mt-3 actions'>

@@ -27,6 +27,14 @@ button {
   font-size: 12px;
 }
 
+.text-red {
+  color: red !important;
+}
+
+.text-blue {
+  color: blue !important;
+}
+
 .bg-blue {
   background: #7a55c1;
 }
@@ -1207,9 +1215,15 @@ section {
 }
 
 
+.reviewForm {
+  margin-top: 20px;
+  background:#fffafa;
+  padding: 20px;
+}
+
 
 .reviewForm .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .reviewForm .form-group .form-control {
@@ -1227,4 +1241,85 @@ section {
 .reviewsCard .info p {
   font-size: 13px;
   line-height: 20px;
+}
+
+.cartPage .table thead {
+  overflow: hidden;
+}
+
+.cartPage .table thead th {
+  background: rgb(213, 210, 210);
+  border: 0px !important;
+}
+
+.cartPage .table thead th:first-child {
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+}
+
+.cartPage .table thead th:last-child {
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cartItemimgWrapper {
+  width: 350px ;
+}
+
+.cartItemimgWrapper .imgWrapper {
+  width: 100px;
+  overflow: hidden;
+}
+
+.cartItemimgWrapper .info h6 {
+  color: rgb(44, 40, 40);
+  font-weight: 500;
+}
+
+.cartItemimgWrapper .info h6:hover{
+  color: red !important;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+.remove svg {
+  font-size: 30px;
+}
+
+.cartPage .quantityDrop button {
+  zoom: 75%;
+}
+
+.cartPage table th,
+.cartPage table td {
+  vertical-align: middle;
+}
+
+.cartPage .table td,
+.cartPage .table th {
+  border-top: 0px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.cartPage table tbody tr:hover {
+  background: #aea3a3;
+}
+
+.cartDetails {
+  border-radius: 7px !important;
+  position: sticky;
+  top: 20px;
+}
+
+.cartDetails h4 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

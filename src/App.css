@@ -161,7 +161,7 @@ button {
 }
 
 .headerSearch {
-  width: 60%;
+  width: 50%;
   height: 60px;
   background: rgb(233, 233, 233);
   padding: 10px;
@@ -848,7 +848,7 @@ footer .linksWrap ul li a:hover {
   font-weight: bold;
 }
 
-footer .copyright ul li a {
+.socials ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -859,16 +859,17 @@ footer .copyright ul li a {
   transition: all 0.3s;
 }
 
-footer .copyright ul li a svg {
+.socials ul li a svg {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-footer .copyright ul li a:hover {
+.socials ul li a:hover {
   background: #2bbef9;
+  border: 0px;
 }
 
-footer .copyright ul li a:hover svg {
+.socials ul li a:hover svg {
   color: white;
 }
 
@@ -1322,4 +1323,50 @@ a {
   font-weight: bold;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.signInPage {
+  background: white;
+  width: 100%;
+  height: auto;
+}
+
+.signInPage .box {
+  width: 500px;
+  height: auto;
+  background: white;
+  margin: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.signInPage .box h2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.signInPage .box form {
+  padding: 20px 40px;
+}
+
+.signInPage .box .form-group {
+  margin-bottom: 20px;
+}
+
+.signInPage .box form h6 {
+  font-weight: bold;
+}
+
+.signInPage .box form img {
+  width: 100%;
+  height: 70px;
+}
+
+.signInPage .box .txt {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.signUpPage {
+
 }

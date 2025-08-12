@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="copyright mt-5 pt-3 pb-3 d-flex">
+        <div className="copyright mt-5 pt-3 pb-3 d-flex socials">
           <p className="mb-0">Copyright 2025. All rights reserved. Powered by KlbTheme.</p>
           <ul className="list list-inline ms-auto mb-0">
             <li className="list-inline-item">
